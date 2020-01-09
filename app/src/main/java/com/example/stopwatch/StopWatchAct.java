@@ -34,7 +34,7 @@ public class StopWatchAct extends AppCompatActivity implements View.OnClickListe
     {
         btnStart = findViewById(R.id.btnStart);
         btnStop = findViewById(R.id.btnStop);
-        icanchor = findViewById(R.id.ivCircle);
+        icanchor = findViewById(R.id.icanchor);
         timer = findViewById(R.id.timer);
 
         // animation
@@ -42,6 +42,7 @@ public class StopWatchAct extends AppCompatActivity implements View.OnClickListe
 
         //create optional animation
         btnStop.setAlpha(0);
+        btnStop.setVisibility(View.GONE);
 
         // Import fonts
         Typeface MLight = Typeface.createFromAsset(getAssets(), "fonts/MLight.ttf");
@@ -59,6 +60,9 @@ public class StopWatchAct extends AppCompatActivity implements View.OnClickListe
         switch (v.getId())
         {
             case R.id.btnStart:
+                btnStart.setVisibility(View.GONE);
+                btnStop.setVisibility(View.VISIBLE);
+
                 icanchor.startAnimation(roundingAlone);
                 btnStop.animate().alpha(1).translationY(-80).setDuration(300).start();
                 btnStart.animate().alpha(0).setDuration(300).start();
@@ -68,10 +72,13 @@ public class StopWatchAct extends AppCompatActivity implements View.OnClickListe
                 timer.start();
                 break;
             case R.id.btnStop:
+                btnStop.setVisibility(View.GONE);
+                btnStart.setVisibility(View.VISIBLE);
 
                 icanchor.clearAnimation();
                 btnStart.animate().alpha(1).translationY(-80).setDuration(300).start();
                 btnStop.animate().alpha(0).setDuration(300).start();
+
                 timer.stop();
                 break;
         }

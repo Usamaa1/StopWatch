@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">StopWatch</string>
+
+    <string name="hoy">Healthy On You</string>
+    <string name="kohinlfm">Key of happiness is not a life for money </string>
+    <string name="start">Get Started</string>
+
+    <string name="startnow">Start Now</string>
+    <string name="stop">Stop</string>
+    <string name="cd">Image View</string>
 </resources>
