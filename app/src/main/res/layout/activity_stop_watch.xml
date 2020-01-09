@@ -11,7 +11,7 @@
 
 
     <ImageView
-        android:id="@+id/ivSplash"
+        android:id="@+id/ivCircle"
         android:layout_width="276dp"
         android:layout_height="247dp"
         android:scaleType="centerCrop"
@@ -41,20 +41,38 @@
 
 
     <Button
-        android:id="@+id/btnSplash"
+        android:id="@+id/btnStart"
         android:layout_width="280dp"
         android:layout_height="55dp"
-        android:text="Get Started"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="92dp"
+        android:background="@drawable/bgbtngreen"
+        android:text="Start Now"
         android:textAllCaps="false"
         android:textColor="#FFF"
         android:textSize="20sp"
-        android:background="@drawable/bgbtngreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:text="Stop"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:background="@drawable/bgbtnred"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
 
 
 
