@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tvSplash, tvSubSplash;
     Button btnSplash;
-    Animation atg;
+    Animation atg, btgone, btgtwo;
     ImageView ivSplash;
 
     @Override
@@ -34,9 +34,15 @@ public class MainActivity extends AppCompatActivity {
 
         // load animation
         atg = AnimationUtils.loadAnimation(this, R.anim.atg);
+        btgone = AnimationUtils.loadAnimation(this, R.anim.btgone);
+        btgtwo = AnimationUtils.loadAnimation(this, R.anim.btgtwo);
 
         //passing animation
         ivSplash.startAnimation(atg);
+        tvSplash.startAnimation(btgone);
+        tvSubSplash.startAnimation(btgone);
+        btnSplash.startAnimation(btgtwo);
+
 
         Typeface MLight = Typeface.createFromAsset(getAssets(), "fonts/MLight.ttf");
         Typeface MMedium = Typeface.createFromAsset(getAssets(), "fonts/MMedium.ttf");
